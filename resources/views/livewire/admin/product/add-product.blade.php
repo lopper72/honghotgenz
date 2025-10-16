@@ -360,7 +360,7 @@
                             // Giải quyết trường hợp link trực tiếp tới MP4 trên cdn.videy.co
                             name: "videyMp4",
                             url: /^https:\/\/cdn\.videy\.co\/[A-Za-z0-9_\-]+\.mp4$/,
-                            html: match => `<video controls src="${match[0]}" width="640" height="360"></video>`
+                            html: match => `<video controls playsinline style="max-width:100%;height:auto;display:block;margin:0 auto;object-fit:contain;" src="${match[0]}"></video>`
                         },
                         {
                             name: "googleDrive",
@@ -392,7 +392,7 @@
                             // Giải quyết trường hợp link trực tiếp tới MP4 trên cdn.videy.co
                             name: "videyMp4",
                             url: /^https:\/\/cdn\.videy\.co\/[A-Za-z0-9_\-]+\.mp4$/,
-                            html: match => `<video controls src="${match[0]}" width="640" height="360"></video>`
+                            html: match => `<video controls playsinline style="max-width:100%;height:auto;display:block;margin:0 auto;object-fit:contain;" src="${match[0]}"></video>`
                         },
                         {
                             name: "googleDrive",
