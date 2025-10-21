@@ -44,6 +44,7 @@ use App\Http\Controllers\Admin\ArapController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\Admin\WrapLinkController;
 use App\Http\Controllers\Client\WrapLinkDisplayController;
+use App\Http\Controllers\Admin\CloneController;
 
 
 
@@ -67,6 +68,11 @@ Route::group(['middleware' => [AdminAuth::class]], function () {
     Route::get('/admin/brands', [BrandController::class, 'index'])->name('admin.brands');
     Route::get('/admin/brands/add', [BrandController::class, 'add'])->name('admin.brands.add');
     Route::get('/admin/brands/edit/{id}', [BrandController::class, 'edit'])->name('admin.brands.edit');
+
+    /* Clones  */
+    Route::get('/admin/clones', [CloneController::class, 'index'])->name('admin.clones');
+    Route::get('/admin/clones/add', [CloneController::class, 'add'])->name('admin.clones.add');
+    Route::get('/admin/clones/edit/{id}', [CloneController::class, 'edit'])->name('admin.clones.edit');
 
     /* Warehouse  */
     Route::get('/admin/warehouses', [WarehouseController::class, 'index'])->name('admin.warehouses');
