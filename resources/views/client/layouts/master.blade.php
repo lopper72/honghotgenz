@@ -54,7 +54,7 @@
                     if (isset($imageUrl2)) {
                         echo '<meta property="og:title" content="'.$product->name.'" />';
                         echo '<meta property="og:image" content="'. $imageUrl2 .'" />';
-                        echo '<meta property="og:url" content="'.url('/' . $product->slug).'" />';
+                        echo '<meta property="og:url" content="'.url('/tintuc/' . $product->slug).'" />';
                         echo '<meta property="og:type" content="website" />';
                         echo '<meta property="og:site_name" content="'. $domain .'" />';
                     } else {
