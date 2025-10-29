@@ -29,10 +29,13 @@ class WrapLinkDisplayController extends Controller
         ]);
 
         // Use absolute URL for image from host
+        $countClick = AffiliateClick::where('affiliate_link_id', $product->id)->count();
+
         $imageUrl2 = asset('storage/images/wraplinks/' . $product->logo);
-        return view('client.wraplink', [
+        return view('client.link', [
             'product' => $product,
-            'imageUrl2' => $imageUrl2
+            'imageUrl2' => $imageUrl2,
+            'countClick' => $countClick
         ]);
     }
 
